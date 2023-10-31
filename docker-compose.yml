@@ -6,7 +6,9 @@ services:
     command:
       - serve
     environment:
-      - TZ=UTC    # optional: Change to your desired timezone
+      - TZ: UTC    # optional: Change to your desired timezone
+      - NTFY_AUTH_FILE: "/user.db"
+      - NTFY_AUTH_DEFAULT_ACCESS: "deny-all"
     volumes:
       - /var/cache/ntfy:/var/cache/ntfy
     ports:

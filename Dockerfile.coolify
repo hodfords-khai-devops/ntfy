@@ -1,3 +1,4 @@
 FROM binwiederhier/ntfy
 COPY ./config/ /etc/ntfy/
+RUN ls /etc/ntfy
 # ENTRYPOINT ["ntfy", "serve"]
