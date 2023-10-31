@@ -1,7 +1,7 @@
 version: "2.1"
 services:
   ntfy:
-    image: binwiederhier/ntfy
+    image: pdkhai/ntfy
     container_name: ntfy
     command:
       - serve
@@ -9,7 +9,6 @@ services:
       - TZ=UTC    # optional: Change to your desired timezone
     volumes:
       - /var/cache/ntfy:/var/cache/ntfy
-      - /etc/ntfy:/etc/ntfy
     ports:
       - 3300:80
     restart: unless-stopped
